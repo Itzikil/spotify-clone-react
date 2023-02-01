@@ -11,8 +11,9 @@ export const spotifyCoreApi = createApi({
     }),
     endpoints: (builder) => ({
         getTopCharts: builder.query({ query: () => '/charts/world' }),
-        getTopChartsByCountry: builder.query({ query: (country) => `/charts/world/${country}` }),
-        getTopArtists: builder.query({ query: () => '/top_20_by_monthly_listeners' }),
+        getTopChartsByCountry: builder.query({ query: (country) => `/top_200_tracks/?country=${country}` }),
+        getTopArtists: builder.query({ query: () => '/top_20_by_followers' }),
+        getArtistSongs: builder.query({ query: (artistid) => `/artist_singles/?id=${artistid}` }),
         getBySearch: builder.query({ query: (name) => `/search/?q=${name}&type=tracks&limit=100` }),
     })
 })
@@ -21,5 +22,6 @@ export const {
     useGetTopChartsQuery,
     useGetTopChartsByCountryQuery,
     useGetTopArtistsQuery,
+    useGetArtistSongsQuery,
     useGetBySearchQuery,
 } = spotifyCoreApi

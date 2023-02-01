@@ -3,18 +3,15 @@ import { useParams } from "react-router-dom";
 import { DetailsHeader, Error, Loader, RelatedSongs } from '../components'
 import { setActiveSong, playPause } from "../redux/features/playerSlice";
 import { useGetSongDetailsQuery, useGetSongLyricsQuery, useGetRelatedArtistsQuery } from "../redux/services/shazamCore";
-import songData from '../data/song.json'
-import songLyrics from '../data/lyrics.json'
-import relatedArtist from '../data/relatedArtists.json'
 
 const SongDetails = () => {
     const { songid } = useParams()
     const dispatch = useDispatch()
     const { activeSong, isPlaying } = useSelector((state) => state.player)
-    const relatedArtists = relatedArtist.artists
-    // const { data: songLyrics, isFetching: isFetchingSongLyrics } = useGetSongLyricsQuery({ songid })
-    // const { data: songData, isFetching: isFetchingSongDetails } = useGetSongDetailsQuery({ songid })
-    // const { data: relatedArtists, isFetching: isFetchingRelatedArtists ,error} = useGetRelatedArtistsQuery({ songid })
+    const { data: songLyrics, isFetching: isFetchingSongLyrics } = useGetSongLyricsQuery( songid )
+    const { data: songData, isFetching: isFetchingSongDetails } = useGetSongDetailsQuery( songid )
+    const { data: relatedArtist, isFetching: isFetchingRelatedArtists ,error} = useGetRelatedArtistsQuery( songData?.tracks[0]?.artists[0].uri.slice(15))
+    const relatedArtists = relatedArtist?.artists
 
     const handlePauseClick = () => {
         dispatch(playPause(false))
@@ -25,8 +22,8 @@ const SongDetails = () => {
         dispatch(playPause(true))
       }
 
-    // if (isFetchingRelatedArtists || isFetchingSongDetails) return <Loader title="Searching song details" />
-    // if (error) return <Error />
+    if (isFetchingRelatedArtists || isFetchingSongDetails) return <Loader title="Searching song details" />
+    if (error) return <Error />
     console.log(songLyrics);
     return (
         <div className="flex flex-col">

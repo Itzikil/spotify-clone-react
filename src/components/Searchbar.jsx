@@ -8,7 +8,7 @@ const Searchbar = () => {
 
   const handleSubmit = (e)=>{
     e.preventDefault()
-    navigate(`/search/${searchTerm}`)
+    navigate(`/spotify-clone-react/search/${searchTerm}`)
   }
   
   return (

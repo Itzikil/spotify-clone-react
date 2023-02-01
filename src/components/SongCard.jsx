@@ -29,12 +29,12 @@ const SongCard = ({ song, activeSong, isPlaying, data, i }) => {
 
       <div className="mt-4 flex flex-col">
         <p className="font-semibold flex-col text-white truncate">
-          <Link to={`/songs/${song?.trackUri ? song.trackUri.slice(14) : song.uri.slice(14)}`}>
+          <Link to={`/spotify-clone-react/songs/${song?.trackUri ? song.trackUri.slice(14) : song.uri.slice(14)}`}>
             {song?.trackUri ? song.trackName : song.name}
           </Link>
         </p>
         <p className="text-sm text-gray-300 mt-1 truncate">
-          <Link to={song.artists ? `/artists/${song?.artists.items ? song.artists.items[0].uri.slice(15) : song.artists[0].spotifyUri.slice(15)}` : '/top-artists'}>
+          <Link to={song.artists ? `/spotify-clone-react/artists/${song?.artists.items ? song.artists.items[0].uri.slice(15) : song.artists[0].spotifyUri.slice(15)}` : '/spotify-clone-react/top-artists'}>
             {song?.trackUri ? song.artists[0].name : song.artists.items[0].profile.name}
           </Link>
         </p>

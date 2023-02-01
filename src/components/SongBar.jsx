@@ -16,7 +16,7 @@ const SongBar = ({ song, i, artistid, isPlaying, activeSong, handlePauseClick, h
       />
       <div className="flex-1 flex flex-col justify-center mx-3">
         {!artistid ? (
-          <Link to={`/songs/${song.key}`}>
+          <Link to={`/spotify-clone-react/songs/${song.key}`}>
             <p className="text-xl font-bold text-white">
               {song?.name}
             </p>

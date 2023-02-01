@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
 const DetailsHeader = ({ artistid, artistData, songData }) => (
-  console.log(artistData),
-  console.log(artistid),
+  // console.log(artistData),
+  // console.log(artistid),
   <div className="relative w-full flex flex-col">
     <div className="w-full bg-gradient-to-l from-transparent to-black sm:h-48 h-28" />
 
@@ -13,7 +13,7 @@ const DetailsHeader = ({ artistid, artistData, songData }) => (
       <div className="ml-5">
         <p className="font-bold sm:text-3xl text-xl text-white">{artistid ? artistData?.artists[0]?.name : songData?.tracks[0].name}</p>
         {!artistid && (
-          <Link to={`/artists/${songData?.tracks[0].artists[0].name}`}>
+          <Link to={`/spotify-clone-react/artists/${songData?.tracks[0].artists[0].name}`}>
             <p className="text-base text-gray-400 mt-2">{songData?.tracks[0].artists[0].name}</p>
           </Link>)}
         <p className="text-base text-gray-400 mt-2">{artistData?.artists[0].genres[0]}</p>

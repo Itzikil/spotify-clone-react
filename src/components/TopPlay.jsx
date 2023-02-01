@@ -19,10 +19,10 @@ const TopChartCard = ({ song, i  ,isPlaying , activeSong , handlePauseClick , ha
     <div className="flex flex-1 justify-between items-center">
       <img src={song?.displayImageUri} alt="" className="w-20 h-20 rounded-lg" />
       <div className="flex flex-1 flex-col justify-center mx-3">
-        <Link to={`/songs/${song.trackUri.slice(14)}`}>
+        <Link to={`/spotify-clone-react/songs/${song.trackUri.slice(14)}`}>
           <p className="text-xl font-bold text-white">{song?.trackName} </p>
         </Link>
-        <Link to={`/artists/${song.artists[0].spotifyUri.slice(15)}`}>
+        <Link to={`/spotify-clone-react/artists/${song.artists[0].spotifyUri.slice(15)}`}>
           <p className="text-base font-bold text-gray-300 mt-1">{song?.artists[0].name}</p>
         </Link>
       </div>
@@ -56,7 +56,7 @@ const TopPlay = () => {
       <div className="w-full flex flex-col">
         <div className="flex justify-between items-center">
           <h2 className="text-white font-bold text-2xl">Top Charts</h2>
-          <Link to="/top-charts">
+          <Link to="/spotify-clone-react/top-charts">
             <p className="text-gray-300 text-base cursor-pointer">See more</p>
           </Link>
         </div>
@@ -69,14 +69,14 @@ const TopPlay = () => {
       <div className="w-full lfex flex-col mt-8">
         <div className="flex justify-between items-center">
           <h2 className="text-white font-bold text-2xl">Top Artists</h2>
-          <Link to="/top-artists">
+          <Link to="/spotify-clone-react/top-artists">
             <p className="text-gray-300 text-base cursor-pointer">See more</p>
           </Link>
         </div>
         <Swiper slidesPerView="auto" spaceBetween={15} freeMode centeredSlides centeredSlidesBounds modules={[FreeMode]} className="mt-4">
           {topPlays?.map(({ trackMetadata: song }, i) =>
             <SwiperSlide key={song?.trackName} style={{ width: '25%', height: 'auto' }} className="shadow-lg rounded-full animate-slideright" >
-              <Link to={`/artists/${song?.artists[0]}`}>
+              <Link to={`/spotify-clone-react/artists/${song?.artists[0]}`}>
                 <img src={song?.displayImageUri} alt="name" className="rounded-full w-full object-cover" />
               </Link>
             </SwiperSlide>
