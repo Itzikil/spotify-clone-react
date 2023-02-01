@@ -1,0 +1,76 @@
+{
+    "tracks": [
+        {
+            "album": {
+                "album_type": "album",
+                "artists": [
+                    {
+                        "external_urls": {
+                            "spotify": "https://open.spotify.com/artist/7tYKF4w9nC0nq9CsPZTHyP"
+                        },
+                        "id": "7tYKF4w9nC0nq9CsPZTHyP",
+                        "name": "SZA",
+                        "type": "artist",
+                        "uri": "spotify:artist:7tYKF4w9nC0nq9CsPZTHyP"
+                    }
+                ],
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/album/1nrVofqDRs7cpWXJ49qTnP"
+                },
+                "id": "1nrVofqDRs7cpWXJ49qTnP",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b2730c471c36970b9406233842a5",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e020c471c36970b9406233842a5",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d000048510c471c36970b9406233842a5",
+                        "width": 64
+                    }
+                ],
+                "name": "SOS",
+                "release_date": "2022-12-08",
+                "release_date_precision": "day",
+                "total_tracks": 23,
+                "type": "album",
+                "uri": "spotify:album:1nrVofqDRs7cpWXJ49qTnP"
+            },
+            "artists": [
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/7tYKF4w9nC0nq9CsPZTHyP"
+                    },
+                    "id": "7tYKF4w9nC0nq9CsPZTHyP",
+                    "name": "SZA",
+                    "type": "artist",
+                    "uri": "spotify:artist:7tYKF4w9nC0nq9CsPZTHyP"
+                }
+            ],
+            "disc_number": 1,
+            "duration_ms": 153946,
+            "explicit": false,
+            "external_ids": {
+                "isrc": "USRC12204584"
+            },
+            "external_urls": {
+                "spotify": "https://open.spotify.com/track/1Qrg8KqiBpW07V7PNxwwwL"
+            },
+            "id": "1Qrg8KqiBpW07V7PNxwwwL",
+            "is_local": false,
+            "is_playable": true,
+            "name": "Kill Bill",
+            "popularity": 92,
+            "preview_url": "https://p.scdn.co/mp3-preview/13e0b95c7f2fe0e672f80befd8dc8f53f8aec6dc?cid=d8a5ed958d274c2e8ee717e6a4b0971d",
+            "track_number": 2,
+            "type": "track",
+            "uri": "spotify:track:1Qrg8KqiBpW07V7PNxwwwL"
+        }
+    ]
+}
